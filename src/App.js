@@ -1,32 +1,17 @@
  
 import "./_variables.scss";
-import './App.css';  
-import {Button} from 'react-bootstrap';
-import Header from './app/components/Header'; 
+import './App.css';   
 import ThemeProvider from 'react-bootstrap/ThemeProvider';
-import AppRoutes from "./app/routes";
-import ModalPopup from "./app/modules/ModalPopup";
-import React from "react";
-
-function App() {
-  const [modalShow, setModalShow] = React.useState(false);
-
+import AppRoutes from "./app/routes"; 
+import React from "react";  
+import { BrowserRouter } from "react-router-dom";
+function App() { 
   return (
-    <div className="App">
-       <ThemeProvider>
-        <Header/>
+    <BrowserRouter>
+    <ThemeProvider> 
         <AppRoutes/>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
-
-      <ModalPopup
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      /> 
       </ThemeProvider>
-    </div>
-  );
+      </BrowserRouter>);
 }
 
 export default App;

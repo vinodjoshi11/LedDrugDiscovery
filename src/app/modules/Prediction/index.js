@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Form, Col, Row, InputGroup } from 'react-bootstrap';
-import AccordionList from "../../components/Element/Accordion";
-import RangeSlider from "../../components/Element/RangeSlider";
+import { Form, Col, InputGroup } from 'react-bootstrap';
+import AccordionList from "../../components/Element/Accordion"; 
 const dataList = [{
     title: "Target", result: [{ label: "heRG", checked: true },
     { label: "cav1.2", checked: true }, { label: "nav1.5", checked: true }]

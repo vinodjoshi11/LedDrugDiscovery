@@ -1,8 +1,14 @@
-import { useState } from 'react';  
+import React from 'react';   
+import { useNavigate } from 'react-router-dom';
+import ActionButton from '../components/Element/ActionButton';
 import "./style.css"
-function BioAssaySearch() { 
-    return (<div className={"lead-container"}>  
-    BioAssaySearch 
+function BioAssaySearch() {  
+  let navigate = useNavigate(); 
+  const onSearch=()=>{
+    navigate("/bio-assay-detail");
+  }
+    return (<div className={"lead-container"}>   
+         <ActionButton variant="primary" onClick={() => onSearch()} text={"Search"}/>
     </div>
     );
 }

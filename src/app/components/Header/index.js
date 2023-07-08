@@ -6,9 +6,10 @@ import Nav from 'react-bootstrap/Nav';
 import Offcanvas from 'react-bootstrap/Offcanvas'; 
 import "./style.css"
 import { getSearch } from '../../modules/AuthService/indes';
-import { useState } from 'react'; 
-import NavbarRoute from '../../routes';
+import { useState } from 'react';  
+import { useLocation } from 'react-router-dom';
 function Header() { 
+  const {pathname}=useLocation(); 
   const [search,searchState]=useState("");
   const onChangeSearch=async(e)=>{
     searchState(e.target.value);
@@ -31,7 +32,7 @@ function Header() {
     <>  
         <Navbar key={"xxl"} expand={"xxl"} className="mb-3">
           <Container>
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/">
             <img
               src={"/images/logo.png"} alt={"logo"}
               width="170"
@@ -63,9 +64,9 @@ function Header() {
               </Offcanvas.Header>
               <Offcanvas.Body> 
                 <Nav className="justify-content-start flex-grow-1 pe-3">
-                  <Nav.Link href="/">Compound Search</Nav.Link>
-                  <Nav.Link href="/bio-assay-search">Bio Assay Search</Nav.Link>
-                  <Nav.Link href="/predictive-ai">Predictive AI</Nav.Link>
+                  <Nav.Link href="/" className={["/"].includes(pathname)?"active-nav":""}>Compound Search</Nav.Link>
+                  <Nav.Link href="/bio-assay-search" className={["/bio-assay-search"].includes(pathname)?"active-nav":""}>Bio Assay Search</Nav.Link>
+                  <Nav.Link href="/predictive-ai" className={["/predictive-ai"].includes(pathname)?"active-nav":""}>Predictive AI</Nav.Link>
                 </Nav>
                 <Form className="d-flex"> 
                   <InputGroup className=" search-input">

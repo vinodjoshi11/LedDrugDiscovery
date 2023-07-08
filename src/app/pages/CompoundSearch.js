@@ -7,7 +7,7 @@ import Prediction from '../modules/Prediction';
 import StructureSearch from '../modules/StructureSearch';
 import Marvinjs from '../modules/Marvinjs';
 import "./style.css"
-function CompoundSearch() {
+function CompoundSearch() { 
     const [key, setKey] = useState('structure');
 
     return (<div className={"lead-container"}> 
