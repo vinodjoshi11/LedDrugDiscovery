@@ -5,6 +5,7 @@ const  DataTable=({
     header=[],
     filters=[]
 })=>{ 
+  
   return (<Container fluid>
     <Row>
        {filters.map((item)=> <Col>
@@ -19,8 +20,17 @@ const  DataTable=({
     </Row>
     <Table striped="columns" responsive="sm">
       <thead><tr>
-        {header.map((item)=>
-          <th key={item.title}>{item.title}</th> 
+        {header.map((item,i)=>
+          <th key={item.title}>{item.title}
+          {item.isHeaderRadio && <Form.Check
+            inline
+            label={""}
+            name="group1"
+            type={"radio"} 
+            defaultChecked={item.isChecked}
+            id={`inline-${"radio"}-${i}`}
+          />}
+          </th> 
        )}
         </tr>
       </thead>

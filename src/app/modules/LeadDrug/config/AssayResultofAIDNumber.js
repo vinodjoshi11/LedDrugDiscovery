@@ -1,4 +1,4 @@
-const particularCompoundResultTableHeaders = [
+const assayResultAIDResultTableHeaders = [
     {
         key: "activity",
         title: "Activity",
@@ -12,7 +12,7 @@ const particularCompoundResultTableHeaders = [
     { key: "percentHerg", title: "Percent HERG Blockade" ,isHeaderRadio:true},
     { key: "opener", title: "Opener",isHeaderRadio:true ,isChecked:true}, 
 ]
-const particularCompoundResultTableData = [
+const assayResultAIDResultTableData = [
     {
         activity: "01",
         score: "Text 001", compoundMean: "Text 001",
@@ -50,7 +50,7 @@ const particularCompoundResultTableData = [
         opener: "Text 001",
     }, 
 ]
-const particularCompoundResultFilters = [
+const assayResultAIDResultFilters = [
     {
         title: "Bio Assay Type :",
         select: true,
@@ -63,7 +63,7 @@ const particularCompoundResultFilters = [
     }
 ]
 export {
-    particularCompoundResultTableData,
-    particularCompoundResultFilters,
-    particularCompoundResultTableHeaders
+    assayResultAIDResultTableData,
+    assayResultAIDResultFilters,
+    assayResultAIDResultTableHeaders
 }

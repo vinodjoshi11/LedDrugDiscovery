@@ -1,12 +1,8 @@
-const bioAssayResultTableHeaders = [
-    {
-        key: "",
-        title: "Select",
-        custom: (row) => {
-            return <a href="#" >{row.leadId}</a>
-        }
-    },
-    { key: "aid", title: "AID" },
+const bioAssayResultTableHeaders = [ 
+    { key: "aid", title: "AID",
+    custom: (row) => {
+        return <a href="#" >{row.leadId}</a>
+    } },
     { key: "bioAssay", title: "BIO Assay" },
     { key: "activity", title: "Activity" },
     { key: "aidSourceName", title: "Aid Source Name" },
@@ -16,37 +12,37 @@ const bioAssayResultTableHeaders = [
 const bioAssayResultTableData = [
     {
         leadId: "01",
-        aid: "Text 001", bioAssay: "Text 001",
+        bioAssay: "Text 001",
         activity: "Text 001", aidSourceName: "Text 001", aidName: "Text 001",
         targetName: "Text 001",
     },
     {
         leadId: "02",
-        aid: "Text 001", bioAssay: "Text 001",
+         bioAssay: "Text 001",
         activity: "Text 001", aidSourceName: "Text 001", aidName: "Text 001",
         targetName: "Text 001",
     },
     {
         leadId: "03",
-        aid: "Text 001", bioAssay: "Text 001",
+         bioAssay: "Text 001",
         activity: "Text 001", aidSourceName: "Text 001", aidName: "Text 001",
         targetName: "Text 001",
     },
     {
         leadId: "04",
-        aid: "Text 001", bioAssay: "Text 001",
+         bioAssay: "Text 001",
         activity: "Text 001", aidSourceName: "Text 001", aidName: "Text 001",
         targetName: "Text 001",
     },
     {
         leadId: "05",
-        aid: "Text 001", bioAssay: "Text 001",
+         bioAssay: "Text 001",
         activity: "Text 001", aidSourceName: "Text 001", aidName: "Text 001",
         targetName: "Text 001",
     },
     {
         leadId: "06",
-        aid: "Text 001", bioAssay: "Text 001",
+         bioAssay: "Text 001",
         activity: "Text 001", aidSourceName: "Text 001", aidName: "Text 001",
         targetName: "Text 001",
     }, 

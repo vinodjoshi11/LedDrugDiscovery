@@ -20,7 +20,7 @@ function ModalPopup(props) {
         {getBodyContent()}
       </Modal.Body>
       {isFooter && <Modal.Footer>
-        <Button onClick={()=>handleFooter}>{footerActionText}</Button>
+        <Button onClick={()=>handleFooter()}>{footerActionText}</Button>
       </Modal.Footer>}
     </Modal>
   );
