@@ -1,17 +1,29 @@
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 import "./_variables.scss";
 import './App.css';  
-import Header from './app/components/Header';
-import LeadDrug from './app/pages/LeadDrug';
+import {Button} from 'react-bootstrap';
+import Header from './app/components/Header'; 
 import ThemeProvider from 'react-bootstrap/ThemeProvider';
+import AppRoutes from "./app/routes";
+import ModalPopup from "./app/modules/ModalPopup";
+import React from "react";
 
 function App() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <div className="App">
        <ThemeProvider>
-      <Header/>
-      <LeadDrug/>
+        <Header/>
+        <AppRoutes/>
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button>
+
+      <ModalPopup
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      /> 
       </ThemeProvider>
     </div>
   );

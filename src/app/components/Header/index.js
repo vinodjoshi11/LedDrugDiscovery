@@ -3,12 +3,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup'; 
 import Nav from 'react-bootstrap/Nav';  
-import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import Offcanvas from 'react-bootstrap/Offcanvas'; 
 import "./style.css"
 import { getSearch } from '../../modules/AuthService/indes';
-import { useState } from 'react';
-import TabHeader from './TabHeader';
+import { useState } from 'react'; 
+import NavbarRoute from '../../routes';
 function Header() { 
   const [search,searchState]=useState("");
   const onChangeSearch=async(e)=>{
@@ -50,21 +49,23 @@ function Header() {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${"xxl"}`}>
-                    <img
-                  src={"/images/logo.png"} alt={"logo"}
-                  width="170"
-                  height="40"
-                  className="d-inline-block align-top"
-                />{' '}
-                </Offcanvas.Title>
-                <Navbar.Text className="primary"> 
-                LEAD Drug Discovery
-              </Navbar.Text>
+                  <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${"xxl"}`}>
+                      <img
+                    src={"/images/logo.png"} alt={"logo"}
+                    width="170"
+                    height="40"
+                    className="d-inline-block align-top"
+                  />{' '}
+                  </Offcanvas.Title>
+                  <Navbar.Text className="primary"> 
+                  LEAD Drug Discovery
+                </Navbar.Text>
               </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3"> 
-               
+              <Offcanvas.Body> 
+                <Nav className="justify-content-start flex-grow-1 pe-3">
+                  <Nav.Link href="/">Compound Search</Nav.Link>
+                  <Nav.Link href="/bio-assay-search">Bio Assay Search</Nav.Link>
+                  <Nav.Link href="/predictive-ai">Predictive AI</Nav.Link>
                 </Nav>
                 <Form className="d-flex"> 
                   <InputGroup className=" search-input">
