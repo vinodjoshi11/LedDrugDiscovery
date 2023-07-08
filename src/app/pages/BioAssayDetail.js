@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ActionButton from '../components/Element/ActionButton';
 import HeaderCard from '../components/Element/HeaderCard';
-import { BIOAssayTableData, BIOAssayTableHeaders,BIOAssayFilters} from '../components/utils/bio-assay-utils';
+import { BIOAssayTableData, BIOAssayTableHeaders,BIOAssayFilters} from '../modules/LeadDrug/config/bio-assay.config';
 import DataTable from '../modules/shared/DataTable';
 import "./style.css"
 function BioAssayDetail() {  

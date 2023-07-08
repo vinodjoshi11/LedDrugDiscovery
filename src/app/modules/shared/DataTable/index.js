@@ -35,7 +35,9 @@ const  DataTable=({
             defaultChecked={row.isChecked}
             id={`inline-${"radio"}-${i}`}
           />}
-              {item.key && <td>{row[item.key]}</td>}
+          
+              {item.custom && <td>{<item.custom {...row}/>}</td>}
+              {!item.custom && item.key && <td>{row[item.key]}</td>}
             </Fragment>
             )} 
         </tr>)}

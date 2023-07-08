@@ -42,5 +42,4 @@ export {
     BIOAssayTableData,
     BIOAssayFilters,
     BIOAssayTableHeaders
-
 }

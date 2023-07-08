@@ -1,6 +1,7 @@
 import React from "react"; 
 import { Routes, Route, Link } from "react-router-dom";
 import WithLayout from "../components/Layout";  
+import ResultParticularCompound from "../pages/ResultParticularCompound";
 const  CompoundSearch=React.lazy(() => import("../pages/CompoundSearch"));
 const  PredictiveAI=React.lazy(() => import("../pages/PredictiveAI"));
 const  BioAssaySearch=React.lazy(() => import("../pages/BioAssaySearch"));
@@ -23,6 +24,8 @@ function AppRoutes() {
           <Route path="/bio-assay-search" element={<WithLayout><BioAssaySearch /></WithLayout>}/> 
           <Route path="/bio-assay-detail" element={<WithLayout><BioAssayDetail /></WithLayout>} />   
           <Route path="/bio-assay-result" element={<WithLayout><BioAssayResult /></WithLayout>} />   
+          <Route path="/particular-compound-result" element={<WithLayout><ResultParticularCompound /></WithLayout>} />   
+          
           <Route path="/predictive-ai" element={<WithLayout><PredictiveAI /></WithLayout>} />  
           <Route path="*" element={<WithLayout><NoMatch /></WithLayout>} /> 
       </Routes>) 

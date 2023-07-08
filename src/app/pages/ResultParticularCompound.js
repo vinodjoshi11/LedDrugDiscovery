@@ -1,15 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';   
+import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ActionButton from '../components/Element/ActionButton';
 import HeaderCard from '../components/Element/HeaderCard';
-import RangeSlider from '../components/Element/RangeSlider';
-import { BIOAssayTableData, BIOAssayTableHeaders,BIOAssayFilters} from '../modules/LeadDrug/config/bio-assay.config';
+import RangeSlider from '../components/Element/RangeSlider'; 
+import { particularCompoundResultFilters, particularCompoundResultTableData, particularCompoundResultTableHeaders } from '../modules/LeadDrug/config/particular-compound-result.config';
 import ModalPopup from '../modules/ModalPopup';
 import DataTable from '../modules/shared/DataTable';
 import "./style.css";
 
-function BioAssayResult() {  
+function ResultParticularCompound() {  
     const [modalShow, setModalShow] = useState(false);  
     const [countDown, setCountDown] = useState(10);
     const [runTimer, setRunTimer] = useState(false); 
@@ -46,10 +47,10 @@ function BioAssayResult() {
           value={countDown}/>
         </>)
     }
-    return (<div>   
-          <HeaderCard heading={"Assay Result of AID Number"} backHeading={"BIO Assay Results"}/>
-          <DataTable dataList={BIOAssayTableData} 
-           filters={BIOAssayFilters} header={BIOAssayTableHeaders}
+    return (<Container>     
+          <HeaderCard heading={"Result for Bio Assay for a particular compound"} backHeading={"BIO Assay Search"}/>
+          <DataTable dataList={particularCompoundResultTableData} 
+           filters={particularCompoundResultFilters} header={particularCompoundResultTableHeaders}
           /> 
           <ActionButton variant="primary" onClick={onPredict} text={"Predictive Modelling"}/>
         {modalShow && <ModalPopup
@@ -60,8 +61,8 @@ function BioAssayResult() {
           getBodyContent={getBodyContent}
           handleFooter={showResult}
         /> }
-    </div>
+    </Container>
     );
 }
 
-export default BioAssayResult;
+export default ResultParticularCompound;
