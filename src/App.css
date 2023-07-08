@@ -1,0 +1,33 @@
+ 
+.primary{
+  color: #791cf0
+} 
+.form-control:focus{
+  box-shadow: none;
+}
+:root{
+  --bs-primary: #791cf0;
+}
+.nav-tabs {
+  --bs-nav-tabs-link-active-bg: #ecdff9;
+  --bs-nav-tabs-link-active-color: #791cf0;
+}
+.nav {
+  --bs-nav-link-color: grey;  
+}
+.accordion-button:not(.collapsed){
+  background-color: white;
+} 
+@media screen and (max-width: 768px) { 
+  .lead-container{
+      margin-top: 55px;
+      padding: 0px 15px!important; 
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .form-input{
+    min-width: auto;
+  }
+}

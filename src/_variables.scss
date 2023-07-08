@@ -1,0 +1,14 @@
+/* custom.scss */
+/* change theme colors */
+// $primary: #791cf0;
+$secondary: #8f5325;
+$success: #3e8d63;
+$info: #7854e4;
+$warning: #b8c924;
+$danger: #d62518;
+/* end custom.scss */
+$primaryTheme:#791cf0!default;
+
+$primary:       $primaryTheme !default;
+
+@import '~bootstrap/scss/bootstrap.scss';

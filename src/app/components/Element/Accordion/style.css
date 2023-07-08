@@ -1,0 +1,37 @@
+.custom-accordion {
+    border-radius: 6px;
+}
+.custom-accordion  .accordion-item{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.custom-accordion .accordion-item .accordion-button{
+padding-left: 35px;
+font-size: 16px;
+font-weight: 500;   
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+box-shadow:none;
+}
+.custom-accordion  .accordion-item:last-of-type .accordion-button.collapsed{
+    border-bottom-right-radius:0;
+    border-bottom-left-radius: 0;
+}
+.custom-accordion .accordion-body{
+    padding:0;
+}
+.custom-accordion .accordion-body .form-check{
+    background: #f8f4ff;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 15px;
+    margin: 0;
+}
+.custom-accordion .accordion-body .form-check:last-child{
+    border-bottom:none;
+}
+.custom-accordion .accordion-body .form-check-input { 
+    margin-left: 0em;
+}
+.custom-accordion .accordion-body label{
+    padding: 0px 10px;
+}
