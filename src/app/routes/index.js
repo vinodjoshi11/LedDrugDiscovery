@@ -7,7 +7,7 @@ const  PredictiveAI=React.lazy(() => import("../pages/PredictiveAI"));
 const  BioAssaySearch=React.lazy(() => import("../pages/BioAssaySearch"));
 const  BioAssayDetail=React.lazy(() => import("../pages/BioAssayDetail"));
 const  BioAssayResult=React.lazy(() => import("../pages/BioAssayResult"));
-
+const PredictProperty=React.lazy(() => import("../pages/PredictProperty"));
 function NoMatch() {
     return (
       <div>
@@ -25,6 +25,7 @@ function AppRoutes() {
           <Route path="/bio-assay-detail" element={<WithLayout><BioAssayDetail /></WithLayout>} />   
           <Route path="/bio-assay-result" element={<WithLayout><BioAssayResult /></WithLayout>} />   
           <Route path="/particular-compound-result" element={<WithLayout><ResultParticularCompound /></WithLayout>} />   
+          <Route path="/predict-property" element={<WithLayout><PredictProperty /></WithLayout>} />   
           
           <Route path="/predictive-ai" element={<WithLayout><PredictiveAI /></WithLayout>} />  
           <Route path="*" element={<WithLayout><NoMatch /></WithLayout>} /> 

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 const bioAssayResultTableHeaders = [ 
     { key: "aid", title: "AID",
     custom: (row) => {
@@ -51,12 +52,14 @@ const bioAssayResultFilters = [
     {
         title: "Bio Assay Type :",
         select: true,
-        options: [{ value: "Screening" }, { value: "One" }],
+        selected:{label:"Screening", value: "Screening" },
+        options: [{label:"Screening", value: "Screening" }, {label:"One", value: "One" }],
     },
     {
         title: "Source Name :",
-        select: true,
-        options: [{ value: "3 options selected" }, { value: "2 options selected" }],
+        select: true,     
+        selected:{label:"3 options selected", value: "3 options selected" }, 
+        options: [{label:"3 options selected", value: "3 options selected" }, {label:"2 options selected", value: "2 options selected" }],
     }
 ]
 export {

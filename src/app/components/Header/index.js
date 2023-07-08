@@ -34,8 +34,7 @@ function Header() {
           <Container>
             <Navbar.Brand href="/">
             <img
-              src={"/images/logo.png"} alt={"logo"}
-              width="170"
+              src={"/images/AI-logo.png"} alt={"logo"} 
               height="46"
               className="d-inline-block align-top"
             />{' '}
@@ -59,7 +58,7 @@ function Header() {
                   />{' '}
                   </Offcanvas.Title>
                   <Navbar.Text className="primary"> 
-                  LEAD Drug Discovery
+                  AI LEAD Drug Discovery
                 </Navbar.Text>
               </Offcanvas.Header>
               <Offcanvas.Body> 

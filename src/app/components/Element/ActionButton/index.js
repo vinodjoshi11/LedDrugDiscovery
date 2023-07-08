@@ -3,7 +3,7 @@ import "./style.css"
 const ActionButton=({
     variant="primary",
     text="",
-    onClick,
+    onClick=()=>{},
     startIcon
 })=> {
   return (
