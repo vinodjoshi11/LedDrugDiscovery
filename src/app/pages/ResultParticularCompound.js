@@ -13,13 +13,17 @@ function ResultParticularCompound() {
     const showResult=()=>{   
        navigate("/bio-assay-result");
     } 
-    return (<Container>     
+    return (<div class="lead-container">     
           <HeaderCard heading={"Result for Bio Assay for a particular compound"} backHeading={"BIO Assay Search"}/>
           <DataTable dataList={bioAssayResultTableData} 
            filters={bioAssayResultFilters} header={bioAssayResultTableHeaders}
           />  
-          <ActionButton variant="primary" onClick={showResult} text={"Save csv"}/> 
-    </Container>
+          <div className="compound-result-footer">
+            <div className='container'>
+              <ActionButton variant="primary" onClick={showResult} text={"Save csv"}/> 
+           </div>
+         </div>
+    </div>
     );
 }
 

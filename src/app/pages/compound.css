@@ -1,0 +1,15 @@
+.searchBy .modal-body{
+    padding: 20px;
+}
+.searchBy .modal-body table{
+    width: 100%;
+}
+.searchBy .modal-body table th{
+    padding: 10px 15px;
+}
+.searchBy .modal-body table td{
+    padding: 10px 15px;
+    color: var(--bs-primary);
+    font-weight: 500;
+    font-size: 16px;
+}

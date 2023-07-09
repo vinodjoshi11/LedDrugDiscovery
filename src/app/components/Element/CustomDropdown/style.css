@@ -4,9 +4,25 @@
     position: relative;
     border-radius: 5px;
   }
-  
+  .primary-container{
+    font-size: 14px;
+    font-weight: 500;
+    color:var(--bs-primary);
+    padding: 0px;
+    border: solid 1px var(--bs-primary);
+    background:#fff;
+    min-width: 200px;
+  }
+  .secondary-container{
+    font-size: 14px;
+    font-weight: 500;
+    color:#212121;
+    padding: 0px;
+    border: solid 1px #ccc;
+    background:#fff;
+  }
   .dropdown-input {
-    padding: 5px;
+    padding:8px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';   
-import { Container } from 'react-bootstrap';
+import { Container, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ActionButton from '../components/Element/ActionButton';
 import HeaderCard from '../components/Element/HeaderCard';
@@ -9,6 +9,7 @@ import { assayResultAIDResultTableData, assayResultAIDResultTableHeaders } from 
 import ModalPopup from '../modules/ModalPopup';
 import DataTable from '../modules/shared/DataTable';
 import "./style.css";
+import CustomDropdown from '../components/Element/CustomDropdown';
 
 function BioAssayResult() {  
     const [modalShow, setModalShow] = useState(false);  
@@ -47,13 +48,68 @@ function BioAssayResult() {
           value={countDown}/>
         </>)
     }
-    return (<Container>     
+    return (<div className={"lead-container"}> 
           <HeaderCard heading={"Assay Result of AID Number"} backHeading={"BIO Assay Result"}/>
-          <DataTable dataList={assayResultAIDResultTableData} 
-           header={assayResultAIDResultTableHeaders}
+          <DataTable dataList={assayResultAIDResultTableData}
+           header={assayResultAIDResultTableHeaders} activeTableHead={5}
           />   
-          <ActionButton variant="primary" onClick={onPredict} text={"Predictive Modelling"}/>
-          <ActionButton variant="outline-primary" onClick={onPredict} text={"Save"}/>
+          <div className="footerButton">
+            <Container>
+            <div className="d-flex align-items-center justify-content-between">
+              <div className="leftAction">
+                  <div className="typeModal">
+                    <h5>Type of Model</h5>
+                    <Form.Check
+                      inline
+                      label={"Clarification"}
+                      name="group1"
+                      type={"radio"}
+                      id={""}
+                    />
+                    <Form.Check
+                      inline
+                      label={"Regression"}
+                      name="group1"
+                      type={"radio"}
+                      defaultChecked={true}
+                      id={""}
+                    />
+                  </div>
+                  <div className="architectureCol">
+                    <h5>Architecture to use</h5>
+                    <div className="d-flex align-items-center">
+                    <Form.Check
+                      inline
+                      label={"Auto ML"}
+                      name="group2"
+                      type={"radio"}
+                      id={""}
+                      defaultChecked={true}
+                    />
+                    <CustomDropdown
+                        placeHolder="Select..."
+                        options={[{label:"PyCaret",value:"PyCaret"},{label:"PyCaret2",value:"PyCaret2x"}]}
+                        selected={{label:"PyCaret",value:"PyCaret"}}
+                        onChange={(value) => console.log(value)}
+                        customClass={"secondary-container"}
+                    />
+                    <Form.Check
+                      inline
+                      label={"ChemBERTA"}
+                      name="group2"
+                      type={"radio"}
+                      id={""}
+                    />
+                    </div>
+                  </div>
+              </div>
+              <div>
+              <ActionButton variant="primary" onClick={onPredict} text={"Predictive Modelling"}/>
+              <ActionButton variant="outline-primary" onClick={onPredict} text={"Save"}/>
+              </div>
+              </div>
+            </Container>
+          </div>
         {modalShow && <ModalPopup
           show={modalShow}
           heading={"Sample Data"}
@@ -62,7 +118,7 @@ function BioAssayResult() {
           getBodyContent={getBodyContent}
           handleFooter={showResult}
         /> }
-    </Container>
+    </div>
     );
 }
 

@@ -8,7 +8,9 @@ function PredictProperty() {
     return (<Container>      
             <DataTable dataList={predictPropertyTableData}   
             header={predictPropertyTableHeader} />  
-          <ActionButton variant="primary"   text={"Save csv"}/> 
+            <div className="predictAction">
+              <ActionButton variant="primary"   text={"Save csv"}/> 
+            </div>
     </Container>
     );
 }

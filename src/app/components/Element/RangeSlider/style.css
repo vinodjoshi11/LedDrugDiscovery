@@ -1,14 +1,36 @@
 .range-box{
     display: flex;
     border-radius: 6px;
-    background: #fff;
-    border: 1px solid var(--bs-primary);
     color: var(--bs-primary);
     align-items: center;
     padding: 2px 0px 0px 10px;
+    flex: auto;
+}
+.compoundRangeBox{
+    display: flex;
+    border-radius: 6px;
+    flex-direction: column;
+    color: var(--bs-primary);
+    align-items: center;
+    padding: 2px 0px 0px 10px;
+    flex: auto;
+    margin-right: 20px;
+    line-height: 10px;
 }
 .output-value{
     display: flex; 
     padding: 10px 10px;font-size: 14px;
     font-weight: bold;
+}
+.sliderValue{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sliderValue .output-value{
+    padding: 0;
+    font-size: 12px;
+    color: #212121;
+    margin-top: -6px;
 }

@@ -1,7 +1,5 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup'; 
 import Nav from 'react-bootstrap/Nav';  
 import Offcanvas from 'react-bootstrap/Offcanvas'; 
 import "./style.css"
@@ -30,12 +28,11 @@ function Header() {
   };
   return (
     <>  
-        <Navbar key={"xxl"} expand={"xxl"} className="mb-3">
+        <Navbar key={"xxl"} expand={"xxl"} className="">
           <Container>
             <Navbar.Brand href="/">
             <img
-              src={"/images/AI-logo.png"} alt={"logo"} 
-              height="46"
+              src={"/images/logo.png"} alt={"logo"}
               className="d-inline-block align-top"
             />{' '}
             </Navbar.Brand>
@@ -52,8 +49,6 @@ function Header() {
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${"xxl"}`}>
                       <img
                     src={"/images/logo.png"} alt={"logo"}
-                    width="170"
-                    height="40"
                     className="d-inline-block align-top"
                   />{' '}
                   </Offcanvas.Title>
@@ -64,22 +59,9 @@ function Header() {
               <Offcanvas.Body> 
                 <Nav className="justify-content-start flex-grow-1 pe-3">
                   <Nav.Link href="/" className={["/"].includes(pathname)?"active-nav":""}>Compound Search</Nav.Link>
-                  <Nav.Link href="/bio-assay-search" className={["/bio-assay-search"].includes(pathname)?"active-nav":""}>Bio Assay Search</Nav.Link>
-                  <Nav.Link href="/predictive-ai" className={["/predictive-ai"].includes(pathname)?"active-nav":""}>Predictive AI</Nav.Link>
+                  <Nav.Link href="/bio-assay-search" className={["/bio-assay-search","/particular-compound-result","/bio-assay-detail","/bio-assay-result"].includes(pathname)?"active-nav":""}>Bio Assay Search</Nav.Link>
+                  <Nav.Link href="/predictive-ai" className={["/predictive-ai","/predict-property"].includes(pathname)?"active-nav":""}>Predictive AI</Nav.Link>
                 </Nav>
-                <Form className="d-flex"> 
-                  <InputGroup className=" search-input">
-                    <Form.Control
-                    placeholder="Search for something"
-                    aria-label="search"
-                    aria-describedby="basic-addon2"
-                    value={search}
-                    onChange={onChangeSearch}
-                    onKeyPress={onKeyPress}
-                    />
-                    <InputGroup.Text onClick={onSearch} className="search-action" id="basic-addon2"><img src={"/images/searchIcon.png"} alt={"search"}/></InputGroup.Text>
-                </InputGroup>
-                </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

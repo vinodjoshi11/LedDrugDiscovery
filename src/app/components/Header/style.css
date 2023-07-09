@@ -9,13 +9,16 @@
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.16);
     border-radius: 50px;
     border: 1px solid #E0E0E0;
-    min-width: 385px;
+    min-width: 360px;
+    background: #fff;
+    margin-right: 20px;
+    height: 52px;
 }
 
 .search-input .input-group-text {
     background: transparent;
     border: none;
-    padding: 0.605rem 0.85rem 0.275rem 0.85rem;
+    padding: 0.405rem 0.85rem 0.405rem 0.85rem;
 }
 
 .search-input .form-control {

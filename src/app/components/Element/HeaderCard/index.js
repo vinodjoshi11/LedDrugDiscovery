@@ -1,5 +1,6 @@
 import React from 'react';    
 import "./style.css"
+import { Container } from 'react-bootstrap';
 function HeaderCard({
     heading="",
     backHeading
@@ -7,10 +8,12 @@ function HeaderCard({
     const handleBack=()=>{
         window.history.back();
       }
-    return (<div >  
-        <div onClick={handleBack}>{backHeading}</div>
+    return (<Container>  
+        <div className="backStrip">
+          <div className="backIcon"><img  onClick={handleBack} src={"/images/back-icon.png"} alt={"back"} />{backHeading}</div>
           {heading}
-    </div>
+        </div>
+    </Container>
     );
 }
 

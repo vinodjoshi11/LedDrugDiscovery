@@ -6,7 +6,7 @@ const MIN = 0;
 const MAX = 100; 
 class RangeSlider extends React.Component { 
       state = {
-        values: [0]
+        values: [this.props.value || 0]
       }; 
       // componentDidUpdate(props,p){
       //   //  this.setState({values:[this.props.value]})
@@ -19,7 +19,7 @@ class RangeSlider extends React.Component {
     }
     render() {
       return (
-        <div className="range-box">
+        <div className={`${this.props.isCompound ? "compoundRangeBox" : "range-box"}`}>
           <Range
             values={this.state.values}
             step={STEP}
@@ -45,7 +45,7 @@ class RangeSlider extends React.Component {
                     borderRadius: "4px",
                     background: getTrackBackground({
                       values: this.state.values,
-                      colors: [this.state.values[0]===100?"#31ab2f":"#791cf0", "#ccc"],
+                      colors: [this.state.values[0]===100?"#31ab2f":"#002edb", "#ccc"],
                       min: MIN,
                       max: MAX
                     }),
@@ -68,16 +68,27 @@ class RangeSlider extends React.Component {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  border:`solid 1px ${this.state.values[0]===100?"#31ab2f":"#791cf0"}`,
+                  border:`solid 1px ${this.state.values[0]===100?"#31ab2f":"#002edb"}`,
                   boxShadow: "0px 2px 6px #AAA"
                 }}
               > 
               </div>
             )}
           />
-          <div  className={"output-value"} style={{color:this.state.values[0]===100?"#31ab2f":"#791cf0"}} id="output">
+
+          {this.props.isCompound ? 
+
+          <div className="sliderValue">
+            <div className={"output-value"} style={{color:this.state.values[0]===100?"#31ab2f":"#212121"}} id="output">
+                {this.state.values[0]}%
+              </div>  
+              <div className={"output-value"}>100%</div>
+            
+          </div>:
+          <div className={"output-value"} style={{color:this.state.values[0]===100?"#31ab2f":"#212121"}} id="output">
             {this.state.values[0]}%
           </div>
+        }
         </div>
       );
     }

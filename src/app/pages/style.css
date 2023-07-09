@@ -1,13 +1,42 @@
 
-.lead-container{background: #ecdff9; padding-left: 65px;   margin-top: 55px;}
+.lead-container{background:#dae2ff; padding-left: 0;   margin-top: 0;}
+.leftSection{
+    padding: 20px;
+}
 .lead-container .lead-tab{
-    margin-top: -60px;
+    margin-top: 0;
+}
+.tab-content{
+    background:#fff;
+    padding: 20px;
+    height: calc(100% - 53px);
 }
 .lead-tab .nav-item button{
-border: none;padding: 12px 25px;
-font-weight: bold;
-    font-size: 15px;
-    min-height: 48px;
+    border: none;
+    padding: 12px 25px;
+    font-weight: 400;
+    font-size: 18px;
+    min-height: 52px;
+}
+.lead-tab .nav-item button.active{
+    background: #fff;
+    font-weight: 500;
+}
+.exactSearchContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imageNo{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 500;
+    padding-right: 20px;
+}
+.smileSection label{
+    display: block;
+    text-transform: uppercase;
 }
 .form-row{
     display: flex;    
@@ -23,28 +52,28 @@ font-weight: bold;
 }
 .form-input { 
     border-radius: 6px;
-    /* border: 1px solid #E0E0E0; */
-    border: 1px solid var(--bs-primary);
-    color:var(--bs-primary);
+    border: 1px solid #ababab;
+    color:#212121;
+    height: 48px;
     min-width: 385px;
 }
 
 .form-input .input-group-text {
     background: #fff;
     border: none;
-    padding: 0.605rem 0.85rem;
+    padding:0;
 }
 
 .form-input .form-control {
     border: none; 
-    color:var(--bs-primary);
-    /* color:  #424242; */
+    /* color:var(--bs-primary); */
+    color:  #212121;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     font-weight: 500;
 } 
 .form-input  .input-group-text img {
-    width: 30px;
+    width: 50px;
 }
 
 .form-input ::placeholder {
@@ -79,3 +108,308 @@ font-weight: 500;margin: 0;
     border: solid 1px var(--bs-primary);
 }
 .form-select:focus{box-shadow: none;}
+.searchSection h3{
+    font-size: 20px;
+}
+.drawingToolSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.drawingToolSection h3{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.searchForm{
+    display: flex;
+}
+.searchBy{
+    color: #424242;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.searchBy span{
+    color:var(--bs-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.uploadButton{
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+.uploadButton:hover{
+    background: none;
+    color:var(--bs-primary);
+}
+.uploadButton:active{
+    background: none !important;
+    color:var(--bs-primary) !important;
+}
+.form-switch .form-check-input{
+    height: 26px;
+    width: 42px;
+}
+.form-switch label{
+    margin-top: 4px;
+    margin-right: 5px;
+    font-weight: 500;
+    color:var(--bs-primary);
+}
+.methodSection{
+    display: flex;
+}
+.methodSection label{
+    white-space: nowrap;
+}
+.similarityPercentage{
+    display: flex;
+    width: 100%;
+}
+.navbar-nav{
+    padding-left: 50px;
+}
+.navbar-nav a{
+    padding: 10px 20px !important;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: transparent solid 2px;
+    margin-left: 2px;
+}
+.navbar-nav a:hover{
+    color:var(--bs-primary);
+    border-color:var(--bs-primary);
+}
+.navbar-nav a.active-nav{
+    color:var(--bs-primary);
+    border-color:var(--bs-primary);
+}
+.structure-search{
+    background: #efefef;
+    padding: 10px;
+    margin: -20px;
+    margin-bottom: 20px;
+}
+.similarySearchContent{
+    display: flex;
+}
+.bigImage{
+    text-align: center;
+    width: 90%;
+}
+.thumbnail{
+    width: 200px;
+    margin-left: auto;
+    background: #efefef;
+    padding: 20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    margin-top: -20px;
+}
+.thumbnail ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.thumbnail ul li{
+    width: 100%;
+    border: #e0e0e0 solid 1px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    cursor: pointer;
+}
+.thumbnail ul li.active{
+    border-color:var(--bs-primary); 
+}
+.thumbnail ul li img{
+    width: 100%;
+}
+.rangeSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rangeSection .form-select{
+    width: 80px;
+    padding: 5px;
+    height: 33px;
+    color: #212121;
+    font-weight: 400;
+}
+.bioAssayRight{
+    background: #fff;
+    padding: 30px;
+}
+.bioAssayRight .drawingToolSection{
+    margin-top: 0;
+}
+.bioAssaysLeft{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.searchResult{
+    width: 210px;
+    margin-top: -27px;
+}
+.bioAssaysLeft .searchSection{
+    width: 100%;
+}
+.searchResult .dropdown-input{
+    height: 46px;
+}
+.searchResult label{
+    margin-bottom: 5px;
+}
+.actionButton{
+    text-align: right;
+    margin-top: 40px;
+}
+.tableSection{
+    background: #fff;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.tableSection th{
+    background: #dae2ff;
+    height: 110px;
+    vertical-align: top;
+    padding: 15px 10px;
+}
+.tableSection th{
+    border-color: #e5ebff;
+}
+.tableSection th .form-check{
+    display: block;
+    padding-left: 30px;
+    padding-top: 17px;
+}
+.tableSection th .form-check-input{
+    box-shadow: 0 0 0 7px rgba(0, 46, 219, 0.25);
+    background: #a3b5f6;
+    border-color:var(--bs-primary); 
+}
+.tableSection td{
+    border-color: #f6f6f6;
+}
+.table{
+    border-color: #f6f6f6;   
+}
+.tableSection tr:nth-of-type(odd) td{
+    background: #fff;
+    box-shadow: none;
+}
+.tableSection tr:nth-of-type(even) td{
+    background: #f9f9f9;
+    box-shadow: none;
+}
+.form-check-input[type=radio]{
+    width: 22px;
+    height: 22px;
+}
+.filterSection label{
+    font-weight: 500;
+}
+.footerButton{
+    background: #fff;
+    box-shadow: 0 0 27px rgb(153 153 153 / 27%);
+    padding: 20px 0;
+    text-align: right;
+}
+.footerButton .btn-outline-primary{
+    margin-right: 0;
+    margin-left: 20px;
+}
+.modal-header{
+    background:var(--bs-primary); 
+    color: #fff;
+}
+.modal-body{
+    padding: 20px 20%;
+}
+.modal-body .range-box{
+    padding-left: 0;
+}
+.modal-body p{
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.modal-footer{
+    border: none;
+    padding: 0 20%;
+    padding-bottom: 20px;
+}
+.predictSection{
+    background: #fff;
+    padding: 30px;
+    height: 100%;
+}
+.predictSection .tableSection{
+    margin: 0 -10px;
+}
+.predictAction{
+    text-align: right;
+}
+.predictAction button{
+    margin-right: 0;
+}
+.tableSection td.radio-active{
+    background: #c4cdef !important;
+}
+.selectedRow{
+    background: #c4cdef !important;
+}
+.footerButton .leftAction{
+    display: flex;
+    text-align: left;
+}
+.typeModal{
+    border-right: #e0e0e0 solid 1px;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.typeModal h5{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.typeModal label, .architectureCol label{
+    font-weight: 500;
+    line-height: 28px;
+    margin-left: 5px;
+    font-size: 18px;
+}
+.architectureCol h5{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-size: 18px;
+}
+.architectureCol .secondary-container{
+    margin-right: 49px;
+}
+.form-check-input:checked[type=radio]{
+    background: url(/public/images/checked-icon.svg) center center no-repeat;
+    background-size: 16px;
+}
+.table-cell  a{
+    font-weight: 500;
+}
+.compound-result-footer{
+    background: #fff; 
+    padding: 20px 0;
+    text-align: right;
+}

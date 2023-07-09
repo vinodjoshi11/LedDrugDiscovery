@@ -25,7 +25,8 @@ const CustomDropdown = ({
   isMulti,
   isSearchable,
   onChange,
-  selected
+  selected,
+  customClass="primary-container"
 }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [selectedValue, setSelectedValue] = useState(isMulti ? [] : selected);
@@ -134,7 +135,7 @@ const CustomDropdown = ({
   };
 
   return (
-    <div className="dropdown-container">
+    <div className={`dropdown-container ${customClass}`}>
       <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
         <div className="dropdown-selected-value">{getDisplay()}</div>
         <div className="dropdown-tools">

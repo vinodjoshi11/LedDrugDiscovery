@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 function ModalPopup(props) {
-  const {getBodyContent=()=>{},handleFooter=()=>{},show,onHide,heading="",isFooter=true,footerActionText=""}=props;
+  const {getBodyContent=()=>{},handleFooter=()=>{},show,onHide,heading="",isFooter=true,footerActionText="",customClass=""}=props;
   return (
     <Modal
       show={show}
@@ -10,8 +10,9 @@ function ModalPopup(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className={customClass}
     >
-      <Modal.Header closeButton>
+      <Modal.Header className="modalClose" closeButton closeVariant={"white"}>
         <Modal.Title id="contained-modal-title-vcenter">
           {heading}
         </Modal.Title>
