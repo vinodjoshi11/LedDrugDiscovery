@@ -1,6 +1,5 @@
-import { useState } from "react";
-const ExactSearch = () => {
-    
+
+const ExactSearch = () => {    
     return (<>
         <div className="exactSearchContent">
             <img src={"/images/diagram.png"} alt={"diagram"} />
