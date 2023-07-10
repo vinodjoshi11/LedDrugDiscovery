@@ -37,7 +37,7 @@ function Header() {
             />{' '}
             </Navbar.Brand>
             <Navbar.Text className="primary navbar-heading"> 
-            LEAD Drug Discovery
+            LED Drug Discovery
           </Navbar.Text>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"xxl"}`} />
             <Navbar.Offcanvas
