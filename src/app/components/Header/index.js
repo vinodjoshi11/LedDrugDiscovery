@@ -53,7 +53,7 @@ function Header() {
                   />{' '}
                   </Offcanvas.Title>
                   <Navbar.Text className="primary"> 
-                  AI LEAD Drug Discovery
+                  AI LED Drug Discovery
                 </Navbar.Text>
               </Offcanvas.Header>
               <Offcanvas.Body> 
