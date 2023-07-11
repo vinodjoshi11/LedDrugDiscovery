@@ -53,7 +53,7 @@ function CompoundSearch() {
     return (<div className={"lead-container"}> 
         <Container fluid>
             <Row>
-                <Col sm={12} md={5} className="leftSection">
+                <Col sm={12} md={12} lg={12} xl={5} className="leftSection">
                     <div className="searchSection">
                         <h3>Search for Compound</h3>
                     <Form className="searchForm"> 
@@ -105,7 +105,7 @@ function CompoundSearch() {
                         </Col>
                     </Form.Group>
                 </Col>
-                <Col sm={12} md={7} className="mt-3 pe-0">
+                <Col sm={12} md={12} lg={12} xl={7} className="mt-3 pe-0">
                     <Tabs
                         id="controlled-tab-example"
                         activeKey={key}
@@ -117,7 +117,7 @@ function CompoundSearch() {
                         </Tab>
                         <Tab eventKey="structure" title={<span> {key==="structure" ? <img src={"/images/tab-icon2-color.png"} alt="" />:<img src={"/images/tab-icon2.png"} alt="" />} Similarity Search </span>}>
                             <Form className="structure-search">
-                                <Row>
+                                <Row className="rangeRow">
                                     <Col sm="5">
                                         <Form.Group className="methodSection" controlId="exampleForm.ControlInput1">
                                             <Form.Label>Methods :</Form.Label>

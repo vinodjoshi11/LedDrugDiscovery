@@ -28,7 +28,7 @@ function Header() {
   };
   return (
     <>  
-        <Navbar key={"xxl"} expand={"xxl"} className="">
+        <Navbar key={"lg"} expand={"lg"} className="">
           <Container>
             <Navbar.Brand href="/">
             <img

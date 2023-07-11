@@ -19,7 +19,7 @@ function BioAssaySearch() {
     return (<div className={"lead-container"}>   
     <Container fluid>
             <Row>
-                <Col sm={12} md={6} className="leftSection">
+                <Col sm={12} md={12} lg={12} xl={6} className="leftSection">
                   <div className="bioAssaysLeft">
                     <div className="searchSection">
                         <h3>Key word(s) Search for Bio Assays</h3>
@@ -55,7 +55,7 @@ function BioAssaySearch() {
                     </div>
                    </div>
                 </Col>
-                <Col sm={12} md={6} className="pe-0">
+                <Col sm={12} md={12} lg={12} xl={6} className="pe-xl-0">
                   <div className="bioAssayRight">
                   <div className="drawingToolSection">
                       <h3>Bio Assays for specific compound</h3>

@@ -13,7 +13,7 @@ function PredictiveAI() {
     return (<div className={"lead-container"}> 
         <Container fluid>
             <Row>
-                <Col sm={12} md={6} className="leftSection">
+                <Col sm={12} md={12} lg={12} xl={6} className="leftSection">
                      <div className="drawingToolSection">
                         <h3>Drawing Tool:</h3>
                         <Form>
@@ -46,7 +46,7 @@ function PredictiveAI() {
                         </div>
                     </Form.Group>
                 </Col>
-                <Col sm={12} md={6} className="pe-0">
+                <Col sm={12} md={12} lg={12} xl={6} className="pe-0">
                     <div className="predictSection">
                         <div className="predictAction"><ActionButton variant="outline-primary" text={"Upload Csv File"} /></div>
                         <DataTable dataList={predictiveAITableData}

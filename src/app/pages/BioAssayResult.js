@@ -55,7 +55,7 @@ function BioAssayResult() {
           />   
           <div className="footerButton">
             <Container>
-            <div className="d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center justify-content-between mobileClass">
               <div className="leftAction">
                   <div className="typeModal">
                     <h5>Type of Model</h5>
@@ -77,7 +77,7 @@ function BioAssayResult() {
                   </div>
                   <div className="architectureCol">
                     <h5>Architecture to use</h5>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center smallMobile">
                     <Form.Check
                       inline
                       label={"Auto ML"}

@@ -22,7 +22,7 @@ const DataTable = ({
   return (<div className="tableSection">
     <Container>
     <Row>
-      {memoFilters.map((item) => <Col md={3} className="filterSection">
+      {memoFilters.map((item) => <Col sm={12} md={4} className="filterSection">
         {item.select && <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>{item.title}</Form.Label> 
           {item.options.length && <CustomDropdown
