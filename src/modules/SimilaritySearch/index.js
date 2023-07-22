@@ -45,9 +45,9 @@ const SimilaritySearch = () => {
         <div className="similarySearchContent">
             <div className="bigImage">
                 {selectedItem && <img src={selectedItem} alt={"diagram"} />}
-                <div className="imageNo">
+                {/* <div className="imageNo">
                     DRL_9584767
-                </div>
+                </div> */}
             </div>
             <div className="thumbnail">
                 <ul>
