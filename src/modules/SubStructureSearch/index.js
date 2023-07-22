@@ -15,14 +15,14 @@ const SubStructureSearch = () => {
                     DRL_9584767
                 </div> */}
             </div>
-            <div className="thumbnail">
+            {data && <div className="thumbnail">
                 <ul>
                     {data && data.map((item,key)=><li key={`${key}_${item.url}`} 
                       className={`${item.url===selectedItem ? "active" : ""}`}  onClick={()=>onSelectItem(item.url)}>
                         {item.url && <img src={item.url} alt={"diagram"}/>}
                     </li>)} 
                 </ul>
-            </div>
+            </div>}
         </div> 
     </>)
 }
