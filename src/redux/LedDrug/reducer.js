@@ -45,7 +45,7 @@ export const LedCompoundSlice = createSlice({
       })
       .addCase(LedCompoundSliceThunk.getCompoundExactSearch.rejected, (state, action) => {
         state.exact.isLoading = false;
-        state.exact.data = {};
+        state.exact.data = null;
         state.exact.message = action.payload;  
       })
       .addCase(LedCompoundSliceThunk.getCompoundSimilaritySearch.pending, (state) => {
@@ -59,7 +59,7 @@ export const LedCompoundSlice = createSlice({
       })
       .addCase(LedCompoundSliceThunk.getCompoundSimilaritySearch.rejected, (state, action) => {
         state.similarity.isLoading = false;
-        state.similarity.data = {};
+        state.similarity.data = null;
         state.similarity.message = action.payload;  
       }) 
       .addCase(LedCompoundSliceThunk.getCompoundSubstructureSearch.pending, (state) => {
@@ -73,7 +73,7 @@ export const LedCompoundSlice = createSlice({
       })
       .addCase(LedCompoundSliceThunk.getCompoundSubstructureSearch.rejected, (state, action) => {
         state.substructure.isLoading = false;
-        state.substructure.data = {};
+        state.substructure.data = null;
         state.substructure.message = action.payload;  
       })  
   },

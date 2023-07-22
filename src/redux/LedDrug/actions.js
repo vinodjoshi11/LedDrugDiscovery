@@ -7,9 +7,11 @@ const getCompoundExactSearch = createAsyncThunk(
   async (search) => {
     try{ 
       const {data}=await getExactSearch(search); 
+      console.log(data)
       return data;
     } catch(error){
-        console.error(error);
+      console.error(error);
+      return null; 
     }
   }
 );
@@ -20,7 +22,8 @@ const getCompoundSimilaritySearch = createAsyncThunk(
       const {data}=await getSimilaritySearch(search); 
       return data;
     } catch(error){
-        console.error(error);
+      console.error(error);
+      return null; 
     }
   }
 );
@@ -38,6 +41,7 @@ const getCompoundSubstructureSearch = createAsyncThunk(
       }
     } catch(error){
         console.error(error);
+        return null; 
     }
   }
 );
