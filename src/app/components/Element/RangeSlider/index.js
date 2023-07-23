@@ -22,8 +22,7 @@ class RangeSlider extends React.Component {
             min={MIN}
             max={MAX}
             onChange={(values) =>{ 
-              this.setState({ values })
-              console.log(values,this.props)
+              this.setState({ values }) 
               if(this.props.isCompound){
                 this.props.onChangeRange(values[0])
               }
