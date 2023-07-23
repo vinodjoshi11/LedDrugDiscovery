@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'; 
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { LedCompoundSliceThunk } from 'redux/LedDrug/actions';
 import SimilaritySearch from '../modules/SimilaritySearch';
 import Marvinjs from '../modules/Marvinjs';
@@ -11,19 +11,22 @@ import { Button, Container, Form, Col, Row, InputGroup } from 'react-bootstrap';
 import ExactSearch from '../modules/ExactSearch';
 import ModalPopup from '../modules/ModalPopup';
 import SubStructureSearch from 'modules/SubStructureSearch';
+import { LedCompoundReducerAction } from 'redux/LedDrug/reducer';
 function CompoundSearch() {
+    const {search,similarity}=useSelector((state)=>state.ledDrugCompound);
+    const {percentage=50,method="Similarity" }=similarity|| {};
     const [modalShow, setModalShow] = useState(false);  
     const dispatch=useDispatch();
-    const [key, setKey] = useState('structure');
-    const [search,searchState]=useState("");
-   
-    const onChangeSearch=async(e)=>{
-      searchState(e.target.value);
+    const [key, setKey] = useState('exactSearch'); 
+ 
+    const onChangeSearch=async(e)=>{ 
+      dispatch(LedCompoundReducerAction.onCompoundSearch(e.target.value));
     }
     const onSearch=async(e)=>{ 
-        dispatch(LedCompoundSliceThunk.getCompoundExactSearch(search));
-        dispatch(LedCompoundSliceThunk.getCompoundSimilaritySearch(search));
-        dispatch(LedCompoundSliceThunk.getCompoundSubstructureSearch(search)); 
+        await dispatch(LedCompoundSliceThunk.getCompoundExactSearch(search));
+        const param=`${search}&percentage=${percentage}&method=${method}`;
+        await dispatch(LedCompoundSliceThunk.getCompoundSimilaritySearch(param));
+        await dispatch(LedCompoundSliceThunk.getCompoundSubstructureSearch(search)); 
     } 
     const onKeyPress = (ev) => {
       if (ev.key === "Enter") {

@@ -1,21 +1,23 @@
+import SpinnerLoader from 'app/components/Element/SpinnerLoader';
 import React from 'react'; 
 import { useDispatch, useSelector } from 'react-redux';
 import { LedCompoundReducerAction } from 'redux/LedDrug/reducer';
 const SubStructureSearch = () => {  
     const dispatch=useDispatch();
-    const {data=null,selectedItem=""}=useSelector((state)=>state.ledDrugCompound.substructure) || {}; 
+    const {data=null,selectedItem="",isLoading=false}=useSelector((state)=>state.ledDrugCompound.substructure) || {}; 
     const onSelectItem=(item)=>{
        dispatch(LedCompoundReducerAction.onSelectSubstructure(item))
     }
     return (<>
         <div className="similarySearchContent">
-            <div className="bigImage">
+            {!isLoading && <div className="bigImage">
                 {selectedItem && <img src={selectedItem} alt={"diagram"} />}
                 {/* <div className="imageNo">
                     DRL_9584767
                 </div> */}
-            </div>
-            {data && <div className="thumbnail">
+            </div>}
+            {isLoading && <SpinnerLoader/>}
+            {!isLoading && data && <div className="thumbnail">
                 <ul>
                     {data && data.map((item,key)=><li key={`${key}_${item.url}`} 
                       className={`${item.url===selectedItem ? "active" : ""}`}  onClick={()=>onSelectItem(item.url)}>

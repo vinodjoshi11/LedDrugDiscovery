@@ -32,13 +32,7 @@ const getCompoundSubstructureSearch = createAsyncThunk(
   async (search) => {
     try{ 
       const {data}=await getSubstructureSearch(search);
-      if(data && data.length){
-       const filterData=data.filter((item)=>{
-          item["url"]=item["smiles_img"];
-          return item
-        })
-        return filterData; 
-      }
+      return data; 
     } catch(error){
         console.error(error);
         return null; 

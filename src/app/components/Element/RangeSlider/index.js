@@ -7,16 +7,12 @@ const MAX = 100;
 class RangeSlider extends React.Component { 
       state = {
         values: [this.props.value || 0]
-      }; 
-      // componentDidUpdate(props,p){
-      //   //  this.setState({values:[this.props.value]})
-      //   console.log(this.props,props.value)
-      // }   
+      };  
       componentDidUpdate(prevProps){
-        if(prevProps.value !== this.props.value){
-            this.setState({values:[this.props.value]});
-        }
-    }
+          if(prevProps.value !== this.props.value){
+              this.setState({values:[this.props.value]});
+          }
+      }
     render() {
       return (
         <div className={`${this.props.isCompound ? "compoundRangeBox" : "range-box"}`}>
@@ -25,7 +21,13 @@ class RangeSlider extends React.Component {
             step={STEP}
             min={MIN}
             max={MAX}
-            onChange={(values) => this.setState({ values })}
+            onChange={(values) =>{ 
+              this.setState({ values })
+              console.log(values,this.props)
+              if(this.props.isCompound){
+                this.props.onChangeRange(values[0])
+              }
+            }}
             renderTrack={({ props, children }) => (
               <div
                 onMouseDown={props.onMouseDown}

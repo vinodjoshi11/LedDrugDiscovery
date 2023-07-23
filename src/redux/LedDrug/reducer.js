@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { LedCompoundSliceThunk } from './actions';
 export const initialState = { 
+    search:"",
     exact: {
       isLoading:false,
       isSuccess:false,
@@ -11,6 +12,8 @@ export const initialState = {
       isLoading:false,
       isSuccess:false,
       message:"",
+      method:"Similarity",
+      percentage:50,
       selectedItem:"",
       data:null
     },
@@ -26,11 +29,20 @@ export const LedCompoundSlice = createSlice({
   name: "auth",
   initialState,
   reducers: { 
+    onCompoundSearch: (state, action) => {
+      state.search = action.payload; 
+    },
     onSelectSubstructure: (state, action) => {
       state.substructure.selectedItem = action.payload; 
     },
     onSelectStructure: (state, action) => {
       state.similarity.selectedItem = action.payload; 
+    },
+    onSelectPercentage: (state, action) => {
+      state.similarity.percentage = action.payload; 
+    },
+    onSelectMethods: (state, action) => {
+      state.similarity.method = action.payload; 
     }
   },
   extraReducers: (builder) => {
@@ -78,9 +90,12 @@ export const LedCompoundSlice = createSlice({
       })  
   },
 });  
-const {  onSelectSubstructure ,onSelectStructure} = LedCompoundSlice.actions;
+const {onCompoundSearch,onSelectMethods,onSelectPercentage,  onSelectSubstructure ,onSelectStructure} = LedCompoundSlice.actions;
 export const LedCompoundReducerAction = {
+  onCompoundSearch,
   onSelectSubstructure,
+  onSelectMethods,
+  onSelectPercentage,
   onSelectStructure 
 }
 export default LedCompoundSlice.reducer;
